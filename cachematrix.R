@@ -1,4 +1,7 @@
-## The functions obtain the inverse of a specified matrix of interest and cache the inverse in an external environment that is different to the current environment. Then the existance of the inverse in an environment can be examined later by consecutive functions in order to decide whether or not to skip the re-calculation of inverse, hence it will result in saving computing times as obtained inverses will not be calculated again in later exercises.
+## The functions obtain the inverse of a specified matrix of interest and cache the inverse in an external environment 
+## that is different to the current environment. Then the existance of the inverse in an environment can be examined 
+## later by consecutive functions in order to decide whether or not to skip the re-calculation of inverse, hence it 
+## will result in saving computing times as obtained inverses will not be calculated again in later exercises.
 
 ## the first function creates a list to:
 ## set - set the matrix
@@ -22,7 +25,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## The second function calculates the inverse of the matrix specified in the previous function. It first examines if the inverse is already computed and cached in the memory or environment. If there was stored inverse, then it skips the calculation, otherwise it computes the inverse of the matrix.
+## The second function calculates the inverse of the matrix specified in the previous function. 
+## It first examines if the inverse is already computed and cached in the memory or environment. 
+## If there was stored inverse, then it skips the calculation, otherwise it computes the inverse of the matrix.
 
 cacheSolve <- function(x, ...) {
         i <- x$getinverse()
